@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue App</title>
+</head>
+<body>
+<div id="app">
+    <p>{{ message }}</p>
+    <button @click="changeMessage">Изменить сообщение</button>
+    <button @click="updateNewSharedText">Отправить новое сообщение</button>
+    <my-component></my-component>
+</div>
+
+<div id="secondary-app">
+    <p>{{ secondaryMessage }}</p>
+    <button @click="updateSecondaryMessage">Обновить сообщение</button>
+    <p>Новое сообщение: {{ newMessage }}</p> <!-- Отображаем новое сообщение -->
+</div>
+
+
+<script src="https://unpkg.com/vue@3.0.0/dist/vue.global.js"></script>
+<script type="module" src="../src/main.js"></script>
+</body>
+</html>
